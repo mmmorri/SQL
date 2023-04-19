@@ -1,0 +1,25 @@
+--Creating a beauty store database including the item types, name, price, quantity, and location
+CREATE TABLE beauty_items (id INTEGER PRIMARY KEY, item_type TEXT, item_name TEXT, price INTEGER, quantity INTEGER, aisle INTEGER);
+
+INSERT INTO beauty_items VALUES
+(1, "Lipstick", "Rouge Beauty", 7.99, 12, 1),
+(2, "Lipstick", "Mango Moo", 7.99, 8, 1),
+(3, "Lipgloss", "Cerulean Shine", 6.99, 15, 2),
+(4, "Lipgloss", "Diamond Deluxe", 7.99, 4, 2),
+(5, "Lipgloss", "Starry Skyes", 6.99, 11, 2),
+(6, "Eyeshadow", "Midnight Mass", 11.99, 17, 5),
+(7, "Eyeshadow", "Snowy Path", 11.99, 11, 5),
+(8, "Eyeshadow", "Greener Grass", 11.99, 21, 5),
+(9, "Eyeliner", "Black, Black, Black", 15.99, 12, 4),
+(10, "Eyeliner", "Brown, Brown, Brown", 15.99, 13, 4),
+(11, "Lip Liner", "Ruby Rouge", 6.99, 3, 3),
+(12, "Lip Liner", "Orange You Glad", 6.99, 11, 3),
+(13, "Blush", "Blushing Bridge", 7.99, 7, 6),
+(14, "Blush", "You Glow Girl", 7.99, 10, 6),
+(15, "Blush", "High of Your Light", 7.99, 4, 6);
+
+--Displaying the entire database ordered by price
+SELECT * FROM beauty_items ORDER BY price ASC;
+
+--Showing total quantity of items on hand
+SELECT SUM(quantity) FROM beauty_items;
